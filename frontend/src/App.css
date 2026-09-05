@@ -1,0 +1,124 @@
+/* VITAL — Component-level styles using design tokens */
+
+/* ============================================================
+   Grid Helpers
+   ============================================================ */
+.grid-kpi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ============================================================
+   Tables
+   ============================================================ */
+.table-glass {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-glass th {
+  background: var(--color-surface-elevated);
+  padding: 0.75rem 1rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.table-glass td {
+  padding: 0.875rem 1rem;
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-border-subtle);
+  transition: background 0.12s ease;
+}
+
+.table-glass tr:last-child td {
+  border-bottom: none;
+}
+
+.table-glass tr:hover td {
+  background: var(--color-accent-dim);
+}
+
+/* ============================================================
+   Recharts Custom Tooltip
+   ============================================================ */
+.custom-recharts-tooltip {
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================================
+   Circular Gauge
+   ============================================================ */
+.gauge-circle {
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+/* ============================================================
+   Attendance Wizard — Biometric Face HUD Corners
+   (Scoped to wizard only — subtle, functional)
+   ============================================================ */
+.hud-corner-tl {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid var(--color-accent);
+  border-left: 2px solid var(--color-accent);
+  border-radius: 2px 0 0 0;
+}
+.hud-corner-tr {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid var(--color-accent);
+  border-right: 2px solid var(--color-accent);
+  border-radius: 0 2px 0 0;
+}
+.hud-corner-bl {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid var(--color-accent);
+  border-left: 2px solid var(--color-accent);
+  border-radius: 0 0 0 2px;
+}
+.hud-corner-br {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid var(--color-accent);
+  border-right: 2px solid var(--color-accent);
+  border-radius: 0 0 2px 0;
+}
+
+/* ============================================================
+   Sidebar Active Indicator
+   ============================================================ */
+.nav-active-indicator {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  background: var(--color-accent);
+  border-radius: 0 2px 2px 0;
+}
